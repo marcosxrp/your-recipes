@@ -6,4 +6,4 @@
 ## Objectives of the project:
 
 - Use of javascript, html and css
-- 
+- API consumption
