@@ -15,10 +15,20 @@ li{
 *, body{
     font-family: 'Montserrat', sans-serif;
 }
+
+body{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/background-by-micheile-henderson.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
 /*Start header*/
 
 header{
-    position: relative;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    width: 100%;
     height: 50px;
     background-color: coral;
     display: flex;
@@ -26,6 +36,7 @@ header{
 }
 
 header .logo{
+    font-size: 2rem;
     height: 50px;
     line-height: 50px;
     width: 150px;
@@ -34,6 +45,7 @@ header .logo{
 
 header nav ul{
     display: none;
+    margin-right: 2rem;
 }
 
 header nav ul li{
@@ -109,13 +121,10 @@ header #burguer-icon{
 
 .home-section{
     width: 100%;
-    height: 100vh;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/background-by-micheile-henderson.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    height: 40vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 2em;
 }
@@ -152,6 +161,10 @@ header #burguer-icon{
     outline: none;
 }
 
+#food-search::placeholder{
+    font-size: .7em;
+}
+
 #search_container>button{
     color: white;
     width: 20%;
@@ -166,6 +179,42 @@ header #burguer-icon{
     cursor: pointer;
 }
 /*Final home section*/
+
+/*Meals List*/
+
+.mealsList{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.meal{
+    max-width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background-color: coral;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.meal h3{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(255, 127, 80, 50%);
+    text-align: center;
+    font-size: 1.8em;
+    padding: .6rem;
+}
+
+.meal img{
+    width: 100%;
+}
 
 
 
@@ -215,9 +264,6 @@ header #burguer-icon{
     }
 
     /*home*/
-    .home-section{
-        justify-content: center;
-    }
     .home-section>h1{
         font-size: 8vw;
         margin-top: 0;
@@ -227,5 +273,13 @@ header #burguer-icon{
     }
     #search_container{
         width: 40%;
+    }
+
+    .home-section{
+        height: 100vh;
+    }
+
+    .mealsList .meal{
+        max-width: 400px;
     }
   }

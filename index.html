@@ -24,7 +24,7 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Your-Recipes</a>
+        <a href="#" class="logo"><i class='bx bx-book-heart'></i></a>
         <nav>
             <ul id="navItens">
                 <li><a href="#">Home</a></li>
@@ -32,7 +32,7 @@
                 <li>
                     <form id="header_search_container">
                         <input type="text" name="header_food-search" id="header_food-search">
-                        <button type="button">SEARCH</button>
+                        <button type="button" id="headerSubmit">SEARCH</button>
                     </form>
                 </li>
             </ul>
@@ -41,11 +41,16 @@
     </header>
     <section class="home-section">
         <h1>YOUR RECIPES</h1>
-        <p>A world of recipes just for you</p>
+        <p>A world of foods just for you</p>
         <form id="search_container">
-            <input type="text" name="food-search" id="food-search" placeholder="Recipes">
+            <input type="text" name="food-search" id="food-search" placeholder="Search recipes here">
             <button type="button" id="homeSubmit">SEARCH</button>
         </form>
+    </section>
+    <section class="recipes" id="recipes">
+        <ul id="mealsList" class="mealsList">
+            <!--Recipes here-->
+        </ul>
     </section>
 </body>
 </html>
